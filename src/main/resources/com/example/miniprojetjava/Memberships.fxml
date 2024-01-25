@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprojetjava.controller.MembershipController">
+    <children>
+        <Text layoutX="9.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Memberships" textAlignment="CENTER" wrappingWidth="177.1429443359375">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <TableView fx:id="membershipTable" editable="true" layoutX="191.0" layoutY="68.0" prefHeight="502.0" prefWidth="671.0">
+            <columns>
+                <TableColumn fx:id="readerColumn" prefWidth="191.0" text="Reader">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="reader" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="statusColumn" prefWidth="161.0" text="Status">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="status" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="creationDateColumn" prefWidth="161.0" text="Creation Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="creationDate" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="endDateColumn" prefWidth="157.0" text="End Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="endDate" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+        <VBox layoutX="27.0" layoutY="68.0" prefHeight="196.0" prefWidth="140.0" spacing="10">
+            <TextField fx:id="searchField" promptText="Search..." />
+            <Button onAction="#searchMembership" prefHeight="26.0" prefWidth="140.0" text="Search..." />
+            <Button onAction="#updateStatus" prefHeight="26.0" prefWidth="140.0" text="Update Status" />
+            <Button onAction="#deleteMembership" prefHeight="26.0" prefWidth="140.0" text="Delete Membership" />
+            <Button onAction="#addMembership" prefHeight="26.0" prefWidth="140.0" text="New Membership" />
+            <Button onAction="#goToReader" prefHeight="26.0" prefWidth="140.0" text="Go Back" />
+        </VBox>
+    </children>
+</AnchorPane>

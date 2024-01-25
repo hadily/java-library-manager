@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprojetjava.controller.AddMembershipController">
+    <children>
+        <Button layoutX="31.0" layoutY="31.0" onAction="#goToMembershipView" prefHeight="26.0" prefWidth="99.0" text="Go Back" />
+
+        <Text layoutX="340.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Membership" textAlignment="CENTER" wrappingWidth="220.1429443359375">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+
+        <VBox alignment="CENTER" layoutX="315.0" layoutY="159.0" prefHeight="282.0" prefWidth="286.0" spacing="10.0">
+            <TextField fx:id="readerNameField" layoutX="208.0" layoutY="88.0" prefHeight="33.0" prefWidth="286.0" promptText="Reader Username" />
+            <TextField fx:id="periodField" layoutX="208.0" layoutY="126.0" prefHeight="34.0" prefWidth="286.0" promptText="Membership Period (in days)" />
+
+            <Button layoutX="328.0" layoutY="324.0" onAction="#addMembership" prefHeight="26.0" prefWidth="147.0" text="Create Membership" textAlignment="CENTER" />
+        </VBox>
+    </children>
+</AnchorPane>

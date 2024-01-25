@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprojetjava.controller.ReaderController">
+    <children>
+        <Text layoutX="9.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Readers" textAlignment="CENTER" wrappingWidth="177.1429443359375">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <TableView fx:id="readerTable" editable="true" layoutX="191.0" layoutY="68.0" prefHeight="502.0" prefWidth="671.0">
+            <columns>
+                <TableColumn fx:id="pictureColumn" prefWidth="94.0" text="Picture">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="picture" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="usernameColumn" prefWidth="123.0" text="Username">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="username" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="fullNameColumn" prefWidth="217.0" text="Full Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="full name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="CINColumn" prefWidth="130.0" text="CIN">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="CIN" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="ageColumn" prefWidth="106.0" text="Age">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="age" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+        <VBox layoutX="27.0" layoutY="68.0" prefHeight="196.0" prefWidth="140.0" spacing="10">
+            <TextField fx:id="searchField" promptText="Search..." />
+            <Button onAction="#searchReader" prefHeight="26.0" prefWidth="140.0" text="Search..." />
+            <Button onAction="#addReader" prefHeight="26.0" prefWidth="140.0" text="Add Reader" />
+            <Button onAction="#deleteReader" prefHeight="26.0" prefWidth="140.0" text="Delete Reader" />
+            <Button onAction="#goToMemberships" prefHeight="26.0" prefWidth="140.0" text="Memberships" />
+            <Button onAction="#goToLibrary" prefHeight="26.0" prefWidth="140.0" text="Go Back" />
+        </VBox>
+    </children>
+</AnchorPane>

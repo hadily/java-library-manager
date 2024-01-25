@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprojetjava.controller.AddBookController">
+    <children>
+        <Button layoutX="31.0" layoutY="31.0" onAction="#backToLibrary" prefHeight="26.0" prefWidth="99.0" text="Go Back" />
+
+        <Text layoutX="337.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Book" textAlignment="CENTER" wrappingWidth="174.1429443359375">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+
+        <VBox alignment="TOP_RIGHT" layoutX="281.0" layoutY="106.0" prefHeight="386.0" prefWidth="286.0" spacing="10.0">
+            <TextField fx:id="isbnField" layoutX="208.0" layoutY="88.0" prefHeight="33.0" prefWidth="286.0" promptText="ISBN Code" />
+            <TextField fx:id="titleField" layoutX="208.0" layoutY="88.0" prefHeight="33.0" prefWidth="286.0" promptText="Title" />
+            <TextField fx:id="authorFirstNameField" layoutX="208.0" layoutY="126.0" prefHeight="34.0" prefWidth="286.0" promptText="Author First Name" />
+            <TextField fx:id="authorLastNameField" layoutX="208.0" layoutY="164.0" prefHeight="32.0" prefWidth="286.0" promptText="Author Last Name" />
+            <TextField fx:id="categoryField" layoutX="208.0" layoutY="164.0" prefHeight="32.0" prefWidth="286.0" promptText="Category" />
+            <TextField fx:id="descriptionField" layoutX="208.0" layoutY="200.0" prefHeight="79.0" prefWidth="286.0" promptText="Description" />
+
+            <Button layoutX="306.0" layoutY="290.0" onAction="#chooseCover" prefHeight="26.0" prefWidth="99.0" text="Choose Cover" />
+            <Label fx:id="coverPathLabel" layoutX="212.0" layoutY="295.0" prefHeight="26.0" prefWidth="217.0" />
+
+            <Button layoutX="328.0" layoutY="324.0" onAction="#addBook" prefHeight="26.0" prefWidth="76.0" text="Add Book" />
+        </VBox>
+    </children>
+</AnchorPane>

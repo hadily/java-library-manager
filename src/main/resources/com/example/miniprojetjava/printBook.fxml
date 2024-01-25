@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprojetjava.controller.AddBookPrintController">
+    <children>
+        <Button layoutX="31.0" layoutY="31.0" onAction="#backToViewBookPrints" prefHeight="26.0" prefWidth="99.0" text="Go Back" />
+
+        <Text layoutX="337.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Print Book" textAlignment="CENTER" wrappingWidth="174.1429443359375">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+
+        <VBox alignment="CENTER" layoutX="281.0" layoutY="183.0" prefHeight="124.0" prefWidth="286.0" spacing="10.0">
+            <TextField fx:id="bookNameField" layoutX="208.0" layoutY="88.0" prefHeight="33.0" prefWidth="286.0" promptText="Book Title" />
+            <TextField fx:id="readerUsernameField" layoutX="208.0" layoutY="126.0" prefHeight="34.0" prefWidth="286.0" promptText="Reader Username" />
+
+            <Button layoutX="328.0" layoutY="324.0" onAction="#printBook" prefHeight="26.0" prefWidth="76.0" text="Add Book" />
+        </VBox>
+    </children>
+</AnchorPane>

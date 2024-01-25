@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprojetjava.controller.LibraryController">
+    <children>
+        <Text layoutX="9.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Library" textAlignment="CENTER" wrappingWidth="177.1429443359375">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <TableView fx:id="bookTable" editable="true" layoutX="191.0" layoutY="68.0" prefHeight="502.0" prefWidth="671.0">
+            <columns>
+                <TableColumn fx:id="isbnCodeColumn" prefWidth="64.0" text="ISBN">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="isbnCode" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="coverColumn" prefWidth="94.0" text="Book Cover">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="bookCover" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="titleColumn" prefWidth="136.0" text="Title">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="authorColumn" prefWidth="121.0" text="Author">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="author" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="categoryColumn" minWidth="3.0" prefWidth="99.0" text="Category">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="category" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="descriptionColumn" prefWidth="156.0" text="Summary">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="description" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+        <VBox layoutX="27.0" layoutY="68.0" prefHeight="196.0" prefWidth="140.0" spacing="10">
+            <TextField fx:id="searchField" promptText="Search..." />
+            <Button onAction="#searchBook" prefHeight="26.0" prefWidth="140.0" text="Search" />
+            <Button onAction="#goToAddBook" prefHeight="26.0" prefWidth="140.0" text="Add Book" />
+            <Button onAction="#deleteBook" prefHeight="26.0" prefWidth="140.0" text="Delete Book" />
+            <Button onAction="#goToViewBookPrints" prefHeight="26.0" prefWidth="140.0" text="Book Prints" />
+            <Button onAction="#goToReader" prefHeight="26.0" prefWidth="140.0" text="Readers" />
+            <Button onAction="#logOut" prefHeight="26.0" prefWidth="141.0" text="Log Out" />
+        </VBox>
+    </children>
+</AnchorPane>
