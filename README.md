@@ -71,7 +71,8 @@ This Java Library Manager project offers the following features:
 5. **Membership Management**
     - Create Memberships: Establish memberships for readers, enabling them to borrow books.
     - Delete Memberships: Remove memberships for readers who no longer wish to participate.
-      
+    - Update Membership Status: Update status from `available` to `expired`
+   
     ![Memberships Interface](images/membership-page.png)
 
 
